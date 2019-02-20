@@ -14,13 +14,16 @@ Should allow you to get going with a full LAP stack and support for DB via linke
 FROM ryanhs/laravel-alpine
 MAINTAINER You <you@youremail.com>
 
+WORKDIR /app
 ADD laravel-app /app
-RUN chown -R apache:apache /app
+RUN composer install --no-dev --no-interaction \
+    && chown -R apache:apache .
 ```
 
 ### add queue worker to supervisord
 
 if you need to add queue worker to supervisord:
+add this code to `/etc/supervisord.conf`:
 
 ```
 [program:laravel-worker]
