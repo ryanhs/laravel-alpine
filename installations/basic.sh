@@ -10,5 +10,5 @@ apk add \
     openntpd \
     supervisor
 
-
+# supervisor default conf
 cp /docker/configs/supervisord.conf /etc/supervisord.conf
