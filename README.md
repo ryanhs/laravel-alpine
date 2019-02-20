@@ -24,10 +24,10 @@ if you need to add queue worker to supervisord:
 
 ```
 [program:laravel-worker]
-command=php /app/artisan queue:work --sleep=3 --tries=3
+command=php /app/artisan queue:work --sleep=1 --tries=2
 autostart=true
 autorestart=true
-user=www
+user=apache
 redirect_stderr=true
 stdout_logfile=/dev/stdout
 ```
@@ -168,16 +168,6 @@ docker-compose up -d
 ```
 
 This will patch the container through to traefik load balancer running from another dc file.
-
-If you would like to add to this, expand on this, maybe you don't want to map your volume and want to copy files for a production system. You can create your own Dockerfile based on this image...
-
-```
-FROM ryanhs/laravel-alpine
-MAINTAINER You <you@youremail.com>
-
-ADD laravel-app /app
-RUN chown -R apache:apache /app
-```
 
 ## Where Do I Put My Files
 
