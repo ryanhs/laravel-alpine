@@ -46,3 +46,10 @@ apk add php7-simplexml
 
 # add php as default /usr/bin/php
 cp /usr/bin/php7 /usr/bin/php
+
+# add laravel schedule:run to cron
+echo "* * * * * /docker/laravel-schedule-run.sh" | tee -a /etc/crontabs/apache
+chmod 644 /etc/crontabs/apache
+
+# if artisan not provided, 
+echo '<?php echo date("Y-m-d H:i:s").PHP_EOL; var_dump($argv);' | tee /app/artisan

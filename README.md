@@ -32,6 +32,10 @@ redirect_stderr=true
 stdout_logfile=/dev/stdout
 ```
 
+### laravel scheduler
+
+This docker run laravel `/app/artisan schedule:run` out of the box, so no need to add another setup
+
 ## Included in this image
 
 apache2, php7, php7-apache2, curl, ca-certificates, git
