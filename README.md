@@ -1,5 +1,7 @@
 # Laravel - Alpine
 
+[https://hub.docker.com/r/ryanhs/laravel-alpine](https://hub.docker.com/r/ryanhs/laravel-alpine)
+
 Provides a basic LAP stack using Alpine, Apache2 and PHP7, loading in the various extensions along the way (see Dockerfile for full list).
 
 Should allow you to get going with a full LAP stack and support for DB via linked container (such as mysql) with ease, allowing you to fine tune various aspects of the server and php via environment variables.
@@ -11,7 +13,7 @@ Should allow you to get going with a full LAP stack and support for DB via linke
 ### setup Dockerfile
 
 ```
-FROM ryanhs/laravel-alpine
+FROM ryanhs/laravel-alpine:latest
 MAINTAINER You <you@youremail.com>
 
 WORKDIR /app
