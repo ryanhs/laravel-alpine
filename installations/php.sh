@@ -42,7 +42,7 @@ apk add \
 	php7-exif
 
 # php modules part 2, separated installations
-apk add php7-simplexml
+apk add php7-simplexml php7-fileinfo
 
 # add php as default /usr/bin/php
 cp /usr/bin/php7 /usr/bin/php
@@ -51,5 +51,5 @@ cp /usr/bin/php7 /usr/bin/php
 echo "* * * * * /docker/laravel-schedule-run.sh" | tee -a /etc/crontabs/apache
 chmod 644 /etc/crontabs/apache
 
-# if artisan not provided, 
+# if artisan not provided,
 echo '<?php echo date("Y-m-d H:i:s").PHP_EOL; var_dump($argv);' | tee /app/artisan
