@@ -39,6 +39,8 @@ redirect_stderr=true
 stdout_logfile=/dev/stdout
 ```
 
+Example of full supervisord.conf: [/configs/supervisord.conf.example](https://github.com/ryanhs/laravel-alpine/blob/master/configs/supervisord.conf.example), you can replace with `RUN cp /app/custom-supervisord.conf /etc/supervisord.conf` or `ADD ... /etc/supervisord.conf`
+
 ### laravel scheduler
 
 This docker run laravel `/app/artisan schedule:run` out of the box, so no need to add another setup
