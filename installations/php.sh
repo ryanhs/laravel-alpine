@@ -42,7 +42,7 @@ apk add \
 	php7-exif
 
 # php modules part 2, separated installations
-apk add php7-simplexml php7-fileinfo
+apk add php7-simplexml php7-fileinfo php7-pcntl
 
 # add php as default /usr/bin/php
 cp /usr/bin/php7 /usr/bin/php
